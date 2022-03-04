@@ -1,0 +1,21 @@
+//TODO: nice to have, zrobic plik wyciagajacy magiczne liczby do stałych
+@import "defaultStyleNumbers";
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: nowrap row-reverse;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  padding: $defaultPadding;
+}
