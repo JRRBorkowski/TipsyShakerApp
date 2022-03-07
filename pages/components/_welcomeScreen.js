@@ -1,10 +1,22 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Button, Modal} from "@mui/material";
-import style from "../../styles/WelcomeScreen.module.scss"
+import style from "../../styles/WelcomeScreen.module.scss";
+import {
+    isWelcomeClicked,
+    setLocalStorageWelcome
+} from "./_localStorageRepository";
 
 const WelcomeScreen = () => {
     const [open, setOpen] = useState(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => {
+        setLocalStorageWelcome()
+        setOpen(false);
+    }
+    useEffect(() => {
+        if (isWelcomeClicked()) {
+            setOpen(false)
+        }
+    },[])
     return (
         <Modal
             open={open}
