@@ -1,42 +1,25 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import IngredientsItems from "./_ingredientsListItem";
 import {alcohols, garnish, mixers} from "./_ingredientsList";
 import IngredientsContext from "./_ingredientsContext";
 import IngredientsSelectedItems from "./_ingredientsSelectedItems";
 import IngredientsCategory from "./_ingredientsCategoryFilter";
+import style from "../../styles/Ingredients.module.scss"
 
-//TODO: dodać pustą wartość selectów
 const Ingredients = () => {
-    // const [submit, setSubmit] = useState("");
-    //
     const {selectedIngredients, setIngredientsState} = useContext(IngredientsContext);
     const handleIngredientsSelection = (e) => {
         const newValue = [...selectedIngredients, e.target.value];
         setIngredientsState(newValue);
     }
-    const ingredientsCategories = ["Alcohol", "Mixer"]
+    const ingredientsCategories = ["alcohol", "mixer", "garnish"]
+
     return (
-        <div>
+        <div className={style.container}>
             <div>Please select your ingredients</div>
-            <IngredientsCategory ingredientsList={alcohols} ingredientsCategory={ingredientsCategories}></IngredientsCategory>
-            <label>
-                <select onChange={handleIngredientsSelection} placeholder={"Please select your ingredients"}>
-                    <option disabled selected value>--Please select alcohol--</option>
-                    <IngredientsItems ingredients={alcohols}/>
-                </select>
-            </label>
-            <label>
-                <select onChange={handleIngredientsSelection} placeholder={"Please select your ingredients"}>
-                    <option disabled selected value>--Please select mixer--</option>
-                    <IngredientsItems ingredients={mixers}/>
-                </select>
-            </label>
-            <label>
-                <select onChange={handleIngredientsSelection} placeholder={"Please select your ingredients"}>
-                    <option disabled selected value>--Please select garnish--</option>
-                    <IngredientsItems ingredients={garnish}/>
-                </select>
-            </label>
+            <IngredientsCategory ingredientsList={alcohols} ingredientsCategory={ingredientsCategories[0]}/>
+            <IngredientsCategory ingredientsList={mixers} ingredientsCategory={ingredientsCategories[1]}/>
+            <IngredientsCategory ingredientsList={garnish} ingredientsCategory={ingredientsCategories[2]} />
             <IngredientsSelectedItems selectedIngredients={selectedIngredients}/>
         </div>
     )

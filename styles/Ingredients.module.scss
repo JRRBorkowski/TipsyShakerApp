@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 10px;
+  font-size: 1.7em;
+  select {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+.selectedList {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  .selectedItem {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    //padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.66);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.22);
+    .deleteButton {
+      display: flex;
+      padding: 10px;
+      background-color: red;
+      border-left: 2px solid black;
+    }
+  }
+}

@@ -1,26 +1,26 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import IngredientsItems from "./_ingredientsListItem";
 import IngredientsContext from "./_ingredientsContext";
+import style from "../../styles/Ingredients.module.scss"
+
 
 const IngredientsCategory = ({ingredientsCategory, ingredientsList}) => {
     const {selectedIngredients, setIngredientsState} = useContext(IngredientsContext);
+    const [selectedValue, setValue] = useState("defaultValue")
 
-    const handleIngredientsSelection = (e) => {
-        const newValue = [...selectedIngredients, e.target.value];
+    const handleIngredientsSelection = (selectedValue) => {
+        const newValue = [...selectedIngredients, selectedValue.target.value];
         setIngredientsState(newValue);
+        setValue("defaultValue");
     }
+    const unselectedItems = ingredientsList.filter(ing => !selectedIngredients.includes(ing.name))
     return (
-        ingredientsCategory.map((ingredientsArr) => {
-                return (
-                    <label key={ingredientsArr}> Please select {ingredientsArr}
-                        <select onChange={handleIngredientsSelection} placeholder={"Please select your ingredients"}>
-                            <option disabled selected value>--Please select alcohol--</option>
-                            <IngredientsItems ingredients={ingredientsList}/>
-                        </select>
-                    </label>
-                )
-            }
-        )
+        <label key={ingredientsCategory} className={style.list}> {ingredientsCategory}:
+            <select onChange={handleIngredientsSelection} defaultValue={"defaultValue"}>
+                <option value={"defaultValue"}>--Please select {ingredientsCategory}--</option>
+                <IngredientsItems ingredients={unselectedItems}/>
+            </select>
+        </label>
     )
 }
 
