@@ -1,5 +1,5 @@
 import Recipe from "./_drinks";
-import {colaIng, lemonIng, ojIng, rumIng, vodkaIng, whiskyIng} from "./_ingredientsList";
+import {alcohols, colaIng, lemonIng, ojIng, rumIng, vodkaIng, whiskyIng} from "./_ingredientsList";
 
 
 export const vodkaShot = new Recipe(

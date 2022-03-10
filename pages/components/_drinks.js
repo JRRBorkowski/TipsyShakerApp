@@ -8,7 +8,7 @@ class Recipe {
         this.mixers = mixer;
         this.garnish = garnish;
         this.trivia = trivia;
-        this.concatIntoIngredientsArray()
+        this.concatIntoIngredientsArray();
     }
     concatIntoIngredientsArray = () => {
         const convertToIngredientsString = (recipeIngredientsCategory) => {
