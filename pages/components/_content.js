@@ -1,39 +1,43 @@
 import React, {useEffect, useState} from "react";
 import WelcomeScreen from "./_welcomeScreen";
 import DrinksList from "./_drinksList";
-import {allRecipes} from "./_recipes";
 import styles from "../../styles/Home.module.css"
 import Ingredients from "./_ingredients";
 import IngredientsContext from "./_ingredientsContext";
-import isEveryRequiredIngredientAvailable from "./_ingredientsChecker";
 import {app, database} from "../../firebaseConfig";
 import {collection, getDocs} from "firebase/firestore";
 import checkAllRecipes from "./_recipesChecker";
+import parseRecipesDTO from "./_parseRecipesDTO";
 
 
 const Content = () => {
     const [selectedIngredients, setIngredientsState] = useState([]);
     const [selectedRecipes, setRecipesState] = useState([]);
     const [recipesArray, setRecipesArray] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        checkAllRecipes(allRecipes, selectedIngredients, setRecipesState);
-        getRecipes(recipesDatabase);
-        console.log(recipesArray)
-    }, [selectedIngredients]);
+        getRecipes(setRecipesArray);
+    }, []);
 
-    const recipesDatabase = collection(database, "Recipe");
-    const getRecipes = async (recipes) => {
-        const docs = await getDocs(recipes)
-            .then((recipes) => {
-                setRecipesArray(
-                    recipes.docs.map(
-                        (item => {
-                            return {...item.data(), id: item.id};
-                        })
-                    )
-                )
-            });
+    useEffect(() => {
+        if (!loading) {
+            console.log(recipesArray);
+            checkAllRecipes(recipesArray, selectedIngredients, setRecipesState);
+        }
+    } ,[loading, selectedIngredients]);
+
+    const getRecipes = async (setter) => {
+        const recipesDatabase = collection(database, "Recipes");
+
+        let docs = await getDocs(recipesDatabase);
+        docs = docs.docs.map(item => {
+            return {...item.data(), id: item.id};
+        });
+        docs = parseRecipesDTO(docs);
+        setter(docs);
+        setLoading(false);
+        return docs;
     };
 
     return (

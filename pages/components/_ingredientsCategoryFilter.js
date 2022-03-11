@@ -13,7 +13,7 @@ const IngredientsCategory = ({ingredientsCategory, ingredientsList}) => {
         setIngredientsState(newValue);
         setValue("defaultValue");
     }
-    const unselectedItems = ingredientsList.filter(ing => !selectedIngredients.includes(ing.name))
+    const unselectedItems = ingredientsList.filter(ing => !selectedIngredients.includes(ing))
     return (
         <label key={ingredientsCategory} className={style.list}> {ingredientsCategory}:
             <select onChange={handleIngredientsSelection} defaultValue={"defaultValue"}>

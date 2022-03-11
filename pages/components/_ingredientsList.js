@@ -1,30 +1,30 @@
-class Ingredient {
-    constructor(name, type) {
-        this.type = type;
-        this.name = name;
-    }
-}
+const vodkaIng = "Vodka";
+const rumIng = "Rum";
+const ginIng = "Gin";
+const wineIng =  "Wine";
+const tequillaIng = "Tequilla";
+const whiskyIng = "Whisky";
+const curacaoIng = "Blue Curacao";
+const triplesecIng = "Triple Sec";
 
-const alcohol = "alcohol";
-const mixer = "mixer"
 
-const vodkaIng = new Ingredient("Vodka", alcohol);
-const rumIng = new Ingredient("Rum", alcohol);
-const ginIng = new Ingredient("Gin", alcohol);
-const wineIng = new Ingredient("Wine", alcohol);
-const tequillaIng = new Ingredient("Tequilla", alcohol);
-const whiskyIng = new Ingredient("Whisky", alcohol);
+const colaIng = "Cola";
+const ojIng = "Orange juice";
+const syrupIng = "Syrup";
+const limejuiceIng = "Lime juice";
+const pinappIng = "Pineapple juice";
+const coconutIng = "Coconut cream";
+const milkIng = "Milk";
+const eggIng = "Egg white";
 
-const colaIng = new Ingredient("Cola", mixer);
-const ojIng = new Ingredient("Orange Juice", mixer);
+const lemonIng = "Lemon";
+const limeIng = "Lime";
+const cherryIng = "Cherry";
+const strawberryIng = "Strawberry";
+const mintIng = "Mint";
 
-const lemonIng = new Ingredient("Lemon", "garnish");
-
-const alcohols = [vodkaIng, rumIng, ginIng, wineIng, tequillaIng, whiskyIng]
-const mixers = [colaIng, ojIng]
-const garnish = [lemonIng]
+const alcohols = [vodkaIng, rumIng, ginIng, wineIng, tequillaIng, whiskyIng, curacaoIng, triplesecIng];
+const mixers = [colaIng, ojIng, syrupIng, pinappIng, coconutIng, milkIng, eggIng, limejuiceIng];
+const garnish = [lemonIng, limeIng, cherryIng, strawberryIng, mintIng];
 
 export {alcohols, mixers, garnish};
-export {vodkaIng, rumIng, ginIng, wineIng, tequillaIng, whiskyIng}
-export {colaIng, ojIng}
-export {lemonIng}

@@ -13,7 +13,7 @@ class Recipe {
     concatIntoIngredientsArray = () => {
         const convertToIngredientsString = (recipeIngredientsCategory) => {
             return recipeIngredientsCategory.map((recipeIngredients) => {
-                return recipeIngredients.name
+                return recipeIngredients
             })
         }
         const ingredientsStringsArray = [];

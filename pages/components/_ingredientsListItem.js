@@ -4,7 +4,7 @@ const IngredientsItems = ({ingredients}) => {
     return (
         ingredients.map((ingredient) => {
             return (
-                <option value={ingredient.name} key={ingredient.name}>{ingredient.type}: {ingredient.name}</option>
+                <option value={ingredient} key={ingredient}>{ingredient}</option>
             )
         })
     )

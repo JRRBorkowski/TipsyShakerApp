@@ -6,8 +6,18 @@ export const vodkaShot = new Recipe(
     "Screwdriver",
     "url",
     "This is a shot of vodka",
-    [vodkaIng],
-    [ojIng],
+    ["Vodka"],
+    ["Orange juice"],
+    [],
+    "vodkavodkavodkavodkavodka"
+);
+
+export const vodkaCola = new Recipe(
+    "Screwdriver with cola",
+    "url",
+    "This is a shot of vodka",
+    ["Vodka"],
+    ["Orange juice", "Cola"],
     [],
     "vodkavodkavodkavodkavodka"
 );
@@ -16,9 +26,9 @@ export const rum = new Recipe(
     "Cuba Libre",
     "url",
     "This is a shot of rum",
-    [rumIng],
-    [colaIng],
-    [lemonIng],
+    ["Rum"],
+    ["Cola"],
+    ["Lemon"],
     "what do we do with the drunken sailor?"
 );
 
@@ -32,5 +42,4 @@ export const whisky = new Recipe(
     "whisky"
 );
 
-console.log(vodkaShot.allIngredients)
-export const allRecipes = [whisky, rum, vodkaShot]
+// export const allRecipes = [whisky, rum, vodkaShot, vodkaCola]

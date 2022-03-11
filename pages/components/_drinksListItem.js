@@ -9,21 +9,21 @@ export const DrinksListItem = ({recipe}) => {
                 <li>{recipe.image}</li>
                 {recipe.alcohols.map((ing) => {
                         return (
-                                <li key={ing.type}>Type: {ing.type} Ingredient: {ing.name}</li>
+                                <li key={ing}>Type: {ing} Ingredient: {ing}</li>
                         )
                     }
                 )
                 }
                 {recipe.mixers.map((ing) => {
                         return (
-                            <li key={ing.type}>Type:{ing.type} Ingredient: {ing.name}</li>
+                            <li key={ing}>Type:{ing} Ingredient: {ing}</li>
                         )
                     }
                 )
                 }
                 {recipe.garnish.map((ing) => {
                         return (
-                            <li key={ing.type}>Type:{ing.type} Ingredient: {ing.name}</li>
+                            <li key={ing}>Type:{ing} Ingredient: {ing}</li>
                         )
                     }
                 )
