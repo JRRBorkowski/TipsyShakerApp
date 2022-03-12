@@ -8,7 +8,7 @@ const IngredientsSelectedItems = () => {
 
     return (
         <div className={style.selectedList}>
-            Selected items:
+            <p className={style.selectedTitle}>Selected ingredients:</p>
             {selectedIngredients.map((ingredient, index) => {
                 const deleteFromSelectedList = () => {
                     const targetSelectedItem = selectedIngredients.indexOf(ingredient);
@@ -18,7 +18,7 @@ const IngredientsSelectedItems = () => {
                 }
                 return (
                     <div key={`${ingredient}-${index}`} className={style.selectedItem}>
-                        <div>
+                        <div className={style.selectedItemText}>
                             {ingredient}
                         </div>
                         <div className={style.deleteButton} onClick={deleteFromSelectedList}>

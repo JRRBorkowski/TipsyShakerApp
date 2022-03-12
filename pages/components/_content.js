@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import WelcomeScreen from "./_welcomeScreen";
 import DrinksList from "./_drinksList";
-import styles from "../../styles/Home.module.css"
+import styles from "../../styles/Home.module.scss"
 import Ingredients from "./_ingredients";
 import IngredientsContext from "./_ingredientsContext";
 import {app, database} from "../../firebaseConfig";

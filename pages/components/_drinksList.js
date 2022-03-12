@@ -4,13 +4,18 @@ import {DrinksListItem} from "./_drinksListItem";
 
 const DrinksList = ({drinks}) => {
     if (drinks === []) {
-        return <>Get tipsy!</>
+        return <div>Get tipsy!</div>
     } else {
         return (
-            drinks.map((recipe) => {
-                    return <DrinksListItem key={recipe.name} recipe={recipe}/>
+            <div className={style.listBody}>
+                <h2>Get tipsy!</h2>
+                <p>Drinks you can make:</p>
+                {drinks.map((recipe) => {
+                        return <DrinksListItem key={recipe.name} recipe={recipe}/>
+                    }
+                )
                 }
-            )
+            </div>
         )
     }
 }

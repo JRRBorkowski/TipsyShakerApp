@@ -1,7 +1,56 @@
+@import "defaultStyleNumbers";
+
+.listBody {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background-color: $defaultLightBrown;
+  padding: $defaultPadding/2;
+  border-radius: 5px;
+  margin: 10px;
+  h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  h3 {
+    margin: 10px 0;
+  }
+}
+
 .listItem {
   display: flex;
   border: 2px solid black;
   padding: 20px;
   margin: 5px;
   width: 80%;
+  border-radius: 5px;
+  background-color: $defaultGrey;
+  .title {
+    color: $defaultBrown;
+    text-decoration: underline;
+  }
+  .ingredients {
+    display: flex;
+    padding: 6px;
+    border: 3px solid $defaultBrown;
+    border-radius: 20px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 8px;
+    width: 50%;
+    text-align: center;
+  }
+  .image {
+    width: 100%;
+  }
+  .description {
+    padding: 5px;
+    border-top: 1px solid $defaultBrown;
+  }
+  .trivia {
+    font-weight: lighter;
+    font-style: italic;
+  }
 }

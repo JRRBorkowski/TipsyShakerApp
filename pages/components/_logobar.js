@@ -7,8 +7,7 @@ const Logobar = () => {
         <div className={navbar.main}>
 
             <div className={navbar.logo}>
-                <div>:DD</div>
-                <div> Tipsy Shaker</div>
+                <div>TIPSY SHAKER</div>
             </div>
         </div>
     )

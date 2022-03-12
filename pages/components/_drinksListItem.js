@@ -5,31 +5,36 @@ export const DrinksListItem = ({recipe}) => {
     return (
         <li key={recipe.name} className={style.listItem}>
             <ul>
-                {recipe.name}
-                <li>{recipe.image}</li>
-                {recipe.alcohols.map((ing) => {
-                        return (
-                                <li key={ing}>Type: {ing} Ingredient: {ing}</li>
-                        )
+                <h2 className={style.title}>{recipe.name}</h2>
+                <img src={recipe.image} className={style.image}></img>
+                <ul> <h3>Alcohols:</h3>
+                    {recipe.alcohols.map((ing) => {
+                            return (
+                                <li key={ing} className={style.ingredients}>{ing}</li>
+                            )
+                        }
+                    )
                     }
-                )
-                }
-                {recipe.mixers.map((ing) => {
-                        return (
-                            <li key={ing}>Type:{ing} Ingredient: {ing}</li>
-                        )
+                </ul>
+                <ul> <h3>Mixers:</h3>
+                    {recipe.mixers.map((ing) => {
+                            return (
+                                <li key={ing} className={style.ingredients}>{ing}</li>
+                            )
+                        }
+                    )
+                    }</ul>
+                <ul> <h3>Garnishes:</h3>
+                    {recipe.garnish.map((ing) => {
+                            return (
+                                <li key={ing} className={style.ingredients}>{ing}</li>
+                            )
+                        }
+                    )
                     }
-                )
-                }
-                {recipe.garnish.map((ing) => {
-                        return (
-                            <li key={ing}>Type:{ing} Ingredient: {ing}</li>
-                        )
-                    }
-                )
-                }
-                <li>{recipe.desc}</li>
-                <li>{recipe.trivia}</li>
+                </ul>
+                <li><p className={style.description}>{recipe.desc}</p></li>
+                <li><p className={style.trivia}>{recipe.trivia}</p></li>
             </ul>
         </li>
     )

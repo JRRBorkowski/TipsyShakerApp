@@ -15,7 +15,7 @@ const IngredientsCategory = ({ingredientsCategory, ingredientsList}) => {
     }
     const unselectedItems = ingredientsList.filter(ing => !selectedIngredients.includes(ing))
     return (
-        <label key={ingredientsCategory} className={style.list}> {ingredientsCategory}:
+        <label key={ingredientsCategory} className={style.list}>
             <select onChange={handleIngredientsSelection} defaultValue={"defaultValue"}>
                 <option value={"defaultValue"}>--Please select {ingredientsCategory}--</option>
                 <IngredientsItems ingredients={unselectedItems}/>
@@ -24,4 +24,4 @@ const IngredientsCategory = ({ingredientsCategory, ingredientsList}) => {
     )
 }
 
-export default IngredientsCategory
+export default IngredientsCategory;

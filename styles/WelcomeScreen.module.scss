@@ -17,7 +17,20 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: $defaultPadding;
+  p {
+    font-size: 1.5rem;
+  }
+  span {
+    color: $defaultBlack;
+  }
+  Button {
+    background-color: $defaultLightBrown;
+    :hover{
+      background-color: $defaultBrown;
+    }
+  }
   :focus-visible {
     outline: none;
   }

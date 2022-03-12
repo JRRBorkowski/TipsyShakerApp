@@ -1,3 +1,5 @@
+@import "defaultStyleNumbers.scss";
+
 .container {
   padding: 0;
   margin: 0;
@@ -5,12 +7,12 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #fafafa;
+  background-color: $defaultBlack;
 }
 
 .footer {
@@ -20,6 +22,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color: $defaultGrey;
 }
 
 .footer a {

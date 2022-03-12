@@ -1,7 +1,30 @@
+@import "defaultStyleNumbers";
+
 .container {
   display: flex;
   flex-flow: column wrap;
-  padding: 10px;
+  padding: $defaultPadding/2;
+  background-color: $defaultLightBrown;
+  border-radius: 5px;
+}
+
+.accordion {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: $defaultBrown;
+  color: $defaultLightBrown;
+  border-bottom: 3px solid $defaultBlack;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: $defaultPadding;
+  border-bottom: 2px solid $defaultBlack;
+  font-weight: bold;
 }
 
 .list {
@@ -10,7 +33,7 @@
   align-items: center;
   flex-flow: column;
   padding: 10px;
-  font-size: 1.7em;
+  font-size: 1.7rem;
   select {
     display: flex;
     width: 100%;
@@ -20,24 +43,42 @@
 }
 
 .selectedList {
+  margin: 10px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  .selectedTitle {
+    padding: $defaultPadding;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-bottom: 3px solid $defaultBrown;
+  }
   .selectedItem {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    //padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.66);
+    border: 2px solid $defaultBlack;
     border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.22);
+    background-color: $defaultBrown;
+    .selectedItemText {
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      color: $defaultLightBrown;
+      font-weight: bolder;
+      font-size: 1.2rem;
+    }
     .deleteButton {
       display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 10px;
-      background-color: red;
-      border-left: 2px solid black;
+      background-color: rgba(0, 0, 0, 0.66);
+      border-left: 2px solid $defaultBlack;
+      color: white;
     }
   }
 }
