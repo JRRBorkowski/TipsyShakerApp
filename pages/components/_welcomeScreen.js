@@ -28,7 +28,7 @@ const WelcomeScreen = () => {
                     <h2>Welcome to Tipsy Shaker app!</h2>
                     <p>This application lets you know what kind of drinks you can make from whatever you got in your disposition!</p>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    <p>How to use it? It's very simple. Click on the ingredients and start <span>shaking up</span></p>
+                    <p>How to use it? It's very simple. Click on the ingredients to select them and start <span>shaking up!</span> The final list of your recipes is going to show up below!</p>
                 </div>
                 <Button variant={"contained"} onClick={handleClose}>
                     Get started now!

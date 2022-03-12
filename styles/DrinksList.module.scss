@@ -8,6 +8,19 @@
   padding: $defaultPadding/2;
   border-radius: 5px;
   margin: 10px;
+  .listText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid $defaultBrown;
+    flex-flow: column;
+    width: 100%;
+    p {
+      font-size: 1.3rem;
+      color: $defaultBlack;
+      font-weight: bold;
+    }
+  }
   h2 {
     font-size: 2rem;
     margin: 20px 0;

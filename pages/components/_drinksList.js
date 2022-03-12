@@ -8,8 +8,10 @@ const DrinksList = ({drinks}) => {
     } else {
         return (
             <div className={style.listBody}>
-                <h2>Get tipsy!</h2>
-                <p>Drinks you can make:</p>
+                <div className={style.listText}>
+                    <h2>Get tipsy!</h2>
+                    <p>Drinks you can make:</p>
+                </div>
                 {drinks.map((recipe) => {
                         return <DrinksListItem key={recipe.name} recipe={recipe}/>
                     }

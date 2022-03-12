@@ -11,6 +11,7 @@ const triplesecIng = "Triple Sec";
 const colaIng = "Cola";
 const ojIng = "Orange juice";
 const syrupIng = "Syrup";
+const sodaIng = "Soda";
 const limejuiceIng = "Lime juice";
 const pinappIng = "Pineapple juice";
 const coconutIng = "Coconut cream";
@@ -22,9 +23,10 @@ const limeIng = "Lime";
 const cherryIng = "Cherry";
 const strawberryIng = "Strawberry";
 const mintIng = "Mint";
+const iceIng = "Ice"
 
 const alcohols = [vodkaIng, rumIng, ginIng, wineIng, tequillaIng, whiskyIng, curacaoIng, triplesecIng];
-const mixers = [colaIng, ojIng, syrupIng, pinappIng, coconutIng, milkIng, eggIng, limejuiceIng];
+const mixers = [colaIng, ojIng, syrupIng, pinappIng, coconutIng, milkIng, eggIng, limejuiceIng, sodaIng];
 const garnish = [lemonIng, limeIng, cherryIng, strawberryIng, mintIng];
 
 export {alcohols, mixers, garnish};
